@@ -158,23 +158,45 @@ public void setUp(){
      * When: Generamos el password -
      */
     
-//     @Test
-//     public void givenAnUpperCase(){
-//        PasswordGenerator passwordGenerator = builder.build();
-//            setUp();
-//        
-//        String password = passwordGenerator.generate();
-//         System.out.println(password);
-//        Assert.assertTrue("Invalid number of uppercase", getUpperCases(password)>=1);//validación 
-//    }//obtener eL uppercase
-//    
-//    private long getLetter(String password) {
-//        //asde@$%f ->['a','s','d','e','@','$','%','f']
-//         return password.chars().filter(letter -> Character.isLetter(letter).count());
-//    }//getUppercase
+     @Test
+     public void givenAnUpperCase(){
+        PasswordGenerator passwordGenerator = builder.build();
+            setUp();
+        
+        String password = passwordGenerator.generate();
+         System.out.println(password);
+        Assert.assertTrue("Invalid number of uppercase", getUpperCases(password)>=1);//validación 
+    }//obtener eL uppercase
+    
+    private long getUpperCases2(String password) {
+        //asde@$%f ->['a','s','d','e','@','$','%','f']
+        return password.chars().filter(letter -> Character.isUpperCase(letter)).count();
+    }//getUppercase
     
     
+   //*******************************************************************************************
+    /**
+     * Scenario: Generar un password con minimo 5 letras mayusculas :
+     * Given Cantidad mínima de numeros - 
+     * When: Generamos el password -
+     */
     
+     @Test
+     public void givenAnUpperCase2(){
+        PasswordGenerator passwordGenerator = builder.build();
+            setUp();
+        
+        String password = passwordGenerator.generate();
+         System.out.println(password);
+        Assert.assertTrue("Invalid number of uppercase", getUpperCases(password)>=1);//validación 
+    }//obtener eL uppercase
+    
+    private long getUpperCases3(String password) {
+        //asde@$%f ->['a','s','d','e','@','$','%','f']
+        return password.chars().filter(letter -> Character.isUpperCase(letter)).count();
+    }//getUppercase
+    
+     
     
     
     
