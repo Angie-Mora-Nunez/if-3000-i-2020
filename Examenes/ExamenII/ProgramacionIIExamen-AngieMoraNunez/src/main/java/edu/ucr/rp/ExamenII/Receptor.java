@@ -26,7 +26,7 @@ public class Receptor implements Runnable {
 
     @Override
     public void run() {
-//        while (true) {
+        while (true) {
             try {
                 String regalos = this.regalos.take();
                 System.out.printf("%s: Recibe paquete con %s regalos, pendientes de procesar(%d)\n", name,
@@ -35,7 +35,7 @@ public class Receptor implements Runnable {
             } catch (InterruptedException e){
                 e.printStackTrace();
             }//catch
-//        }//while(True)
+        }//while(True)
 
     }//EndRun   
     

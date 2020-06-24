@@ -31,7 +31,7 @@ public class Recolector implements Runnable{
     @Override
     public void run() {
 
-//        while (true) {
+        while (true) {
             
             System.out.printf("%s: Recolecta paquete con  %s regalo(s) \n",name,contador);
             regalos.add(contador+"");
@@ -40,7 +40,7 @@ public class Recolector implements Runnable{
             } catch (InterruptedException e) {//try
                 e.printStackTrace();
             }//catch
-//        }//whileTrue
+        }//whileTrue
     }//endRun
     
     
